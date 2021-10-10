@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'PublicSansRegular';
+    src: url('../fonts/PublicSansRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'PublicSansRegular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    background-color: #f8f8f8;
+}
+
+.top-image {
+    height: 200px;
+    background-image: url('../img/a940.jpg');
+    background-size: cover;
+    background-position: 50% center;
+}
+
+.brand-a {
+    color: #808080;
+}
+
+.brand-b {
+    color: #0000c1;
+}
+
+.posttitle {
+    background-color: #808080;
+    color: #fcfcfc;
+}
+
+.posttext {
+    text-align: justify;
+}
+
+.posttext img {
+    max-width: 100%;
+}
+
+.highlighter-rouge {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #b0b0b0;
+    background-color: #f0f0f0;
+    padding: 5px;
+}
+
+.highlighter-rouge pre {
+    margin-bottom: 0;
+}
+
+.language-csharp .k {
+    color: #850505;
+}
+.language-csharp .nc {
+    color: #050564;
+}
+.language-csharp .kt {
+    color: #0a5ada;
+}
+
+.language-console {
+    color: #fcfcfc;
+    background-color: #808080;
+}
+
+.language-sql .k {
+    color: #0a5ada;
+}
