@@ -10,7 +10,7 @@ title: blog.ypro.tech
         <h5 class="card-title">{{ post.title }}</h5>
       </div>
       <div class="card-footer text text-end fst-italic">
-        <a href="{{ post.url }}">czytaj dalej ...</a>
+        <a class="text-decoration-none" href="{{ post.url }}">czytaj dalej ...</a>
       </div>
     </div>
   {% endfor %}
