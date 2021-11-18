@@ -70,3 +70,9 @@ body {
 .language-sql .k {
     color: #0a5ada;
 }
+
+.language-plaintext.highlighter-rouge {
+    border: 0;
+    padding: 2px;
+    margin: 2px;
+}
