@@ -32,10 +32,6 @@ body {
     color: #fcfcfc;
 }
 
-.posttext {
-    text-align: justify;
-}
-
 .posttext img {
     max-width: 100%;
 }
