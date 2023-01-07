@@ -42,7 +42,12 @@ body {
     max-width: 100%;
 }
 
-h4 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #0000c1;
 }
 
@@ -66,8 +71,17 @@ h4 {
     color: #050564;
 }
 
+.language-csharp .n,
+.language-csharp .nf {
+    color: #939d07;
+}
+
 .language-csharp .kt {
     color: #0a5ada;
+}
+
+.language-csharp .c1 {
+    color: #00742d;
 }
 
 .language-console {
@@ -81,6 +95,4 @@ h4 {
 
 .language-plaintext.highlighter-rouge {
     border: 0;
-    padding: 2px;
-    margin: 2px;
 }
