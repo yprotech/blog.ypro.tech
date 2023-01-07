@@ -3,6 +3,11 @@ layout: base
 ---
 
 <div>
+    {%- if page.topimage -%}
+    <div class="top-image">
+        <img src="{{site.url}}/img/{{page.topimage}}" alt="{{page.title}}" />
+    </div>
+    {%- endif -%}
     <div class="posttitle p-4 pb-2 mb-4">
         <div class="fs-2">{{page.title}}</div>
         <div class="postsdate pt-4 fs-6 text-end">{{page.date | date: "%F"}}</div>
