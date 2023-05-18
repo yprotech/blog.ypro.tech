@@ -12,11 +12,21 @@ layout: base
         <div class="fs-2">{{page.title}}</div>
         <div class="postsdate pt-4 fs-6 text-end">{{page.date | date: "%F"}}</div>
     </div>
-    <div class="mx-2 m-xl-0">
-        <div class="col-xl-9 posttext">
-            {{content}}
-        </div>
-        <div class="col-xl-3">
+    <div class="mx-2 m-xl-0 container">
+        <div class="row">
+            <div class="col col-xl-9 col-12 posttext">
+                {{content}}
+            </div>
+            <div class="col col-xl-3 postsidetext">
+                {% for post in site.posts %}
+                {% assign currentdate = post.date | date: "%Y" %}
+                {% if currentdate != date %}
+                {{ currentdate }}:
+                {% assign date = currentdate %}
+                {% endif %}
+                <div class="my-2"><a href="{{ post.url }}">{{ post.title }}</a></div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>

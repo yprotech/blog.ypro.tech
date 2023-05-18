@@ -42,6 +42,10 @@ body {
     max-width: 100%;
 }
 
+.postsidetext {
+    font-size: 0.8em;
+}
+
 h1,
 h2,
 h3,
