@@ -3,7 +3,7 @@ layout: toppage
 title: blog.ypro.tech
 ---
 
-<p>
+  <p></p>
   <div class="row">
     <div class="col-md-6">
       <div class="mt-3">
@@ -47,7 +47,7 @@ title: blog.ypro.tech
           </div>
         {% endfor %}
       </div>
-        <div class="mt-3">
+      <div class="mt-3">
         <h4>Pozostałe</h4>
         {% for post in site.categories["Pozostałe"] %}
           <div class="card mt-3">
@@ -62,4 +62,4 @@ title: blog.ypro.tech
       </div>
     </div>
   </div>
-</p>
+  <p></p>
