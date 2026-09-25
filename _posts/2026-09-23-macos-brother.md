@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "macOS 27 a drukarki Brother"
+title: "macOS 27 a drukarki Brother: jak rozwiązać problem ze sterownikami?"
 date: 2026-09-23
+edited: 2026-09-25
 permalink: /2026/09/macos-brother
 categories: ["Instrukcje"]
 ---
@@ -22,13 +23,18 @@ Gdy nie ma sterowników od producenta należy sobie poradzić samodzielnie. Istn
 Wystarczy pobrać kod źródłowy, skompilować i zainstalować w systemie.
 
 ```console
+# 1. Instalacja narzędzi programistycznych
 brew install cmake pkg-config
 
+# 2. Sklonowanie repozytorium projektu brlaser
 git clone https://github.com/pdewacht/brlaser.git
 cd brlaser
 
-cmake . -DCMAKE_POLICY_VERSION_MINIMUM=3.5 
+# 3. Przygotowanie i kompilacja kodu źródłowego
+cmake . -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 make
+
+# 4. Próba automatycznej instalacji w systemie
 sudo make install
 ```
 
@@ -91,3 +97,14 @@ należy wybrać w tym polu pozycję ‘Wybierz oprogramowanie…’ i wybrać je
 ![wybierz brlaser](/img/p202609/brother_03.png){: .mx-auto .d-block }
 
 Z tym sterownikiem dodanie drukarki w systemie nie powinno już zgłaszać błędu z oprogramowaniem drukarki.
+
+
+### Jakie modele obsługuje sterownik brlaser?
+
+Sterownik wspiera szereg monochromatycznych drukarek laserowych i urządzeń wielofunkcyjnych Brother bez AirPrint. Pełną listę oraz szczegóły można znaleźć w [dokumentacji źródłowej](https://github.com/pdewacht/brlaser/blob/master/README.md):
+
+- Seria HL: m.in. HL-1110, HL-1200, HL-2030, HL-2140, HL-2220
+- Seria HL-L: m.in. HL-L2300D, HL-L2320D, HL-L2340D, HL-L2375DW
+- Seria DCP: m.in. DCP-1510, DCP-1600, DCP-7030, DCP-7055
+- Seria DCP-L: m.in. DCP-L2500D, DCP-L2520DW, DCP-L2540DW
+- Seria MFC: m.in. MFC-1910W, MFC-7240, MFC-7360N, MFC-L2710DW
